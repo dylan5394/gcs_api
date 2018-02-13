@@ -1,0 +1,42 @@
+{
+  "name": "gcs_api",
+  "version": "1.0.0",
+  "description": "API to create GCS URLs",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch & nodemon dist",
+    "test": "tsc && mocha dist/**/*.spec.js",
+    "lint": "eslint src --ext ts",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylan5394/gcs_api.git"
+  },
+  "author": "Dylan Davis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dylan5394/gcs_api/issues"
+  },
+  "homepage": "https://github.com/dylan5394/gcs_api#readme",
+  "dependencies": {
+    "@types/node": "7.0.22",
+    "crypto": "^1.0.1",
+    "express": "4.15.3",
+    "nodemon": "1.11.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "2.2.41",
+    "@types/node": "7.0.22",
+    "eslint": "4.0.0",
+    "eslint-config-airbnb-base": "11.2.0",
+    "eslint-plugin-import": "2.3.0",
+    "eslint-plugin-promise": "3.5.0",
+    "mocha": "3.4.2",
+    "supertest": "3.0.0",
+    "tsc": "1.20150623.0",
+    "typescript": "2.3.3",
+    "typescript-eslint-parser": "3.0.0"
+  }
+}
