@@ -1,15 +1,15 @@
-##To run local webserver on port 3000:
+## To run local webserver on port 3000:
 
 1. Clone git repo
 2. cd gcs_api
 3. npm install
 4. npm run dev
 
-##Testing:
+## Testing:
 
 npm test
 
-##Notes:
+## Notes:
 
 To get a signed url, send a get request to the following api endpoint:
 
