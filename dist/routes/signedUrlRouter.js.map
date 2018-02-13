@@ -1,0 +1,1 @@
+{"version":3,"file":"signedUrlRouter.js","sourceRoot":"","sources":["../../src/routes/signedUrlRouter.ts"],"names":[],"mappings":";AAAA,mCAAkC;AAElC,IAAI,eAAe,GAAG,OAAO,CAAC,MAAM,EAAE,CAAA;AAEtC,eAAe,CAAC,GAAG,CAAC,cAAc,EAAE,UAAS,GAAG,EAAE,GAAG;IACpD,GAAG,CAAC,IAAI,CAAC;QACF,UAAU,EAAE,MAAM;KACpB,CAAC,CAAA;AACP,CAAC,CAAC,CAAA;AAEF,iBAAS,eAAe,CAAA"}

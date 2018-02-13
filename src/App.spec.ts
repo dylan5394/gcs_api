@@ -1,10 +1,10 @@
 import * as supertest from 'supertest'
 import app from './App'
 
-describe('App', () => {
-  it('works', () =>
+describe('API', () => {
+  it('returns json response', () =>
     supertest(app)
-      .get('/')
+      .get('/signed_urls')
       .expect('Content-Type', /json/)
       .expect(200)
   )
