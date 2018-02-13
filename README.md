@@ -23,12 +23,10 @@ The response will be in the format:
 The above endpoint takes 3 query parameters:
 
 1. expires - The time the signed url will expire. Must be a timestamp in seconds. (Default 1 hour from the time the API receives your request)
-2. requestType - Should be GET, PUT, DELETE, or POST. Note that a signed url using POST may not work due to policy issues with GCS. PUT is more reliable. (Default GET)
-3. contentType - application/json, application/xml, etc... (Default none)
+2. requestType - Must be GET, PUT, DELETE, or POST. Note that a signed url using POST may not work due to policy issues with GCS. PUT is more reliable. (Default GET)
+3. contentType - Must be application/json or application/xml due to simplicity and issues when combining certain content types with GCS urls (Default none)
 
 The returned signed url will be encoded according to any query parameters you supply. If no parameters are supplied in your request, the signed url will be a GET request expiring in 1 hour.
-
-Entering invalid request types or content types will still generate a signed url though it won't be useable.
 
 example request with parameters: 
 

@@ -8,13 +8,30 @@ signedUrlRouter.get('/', function (request, response) {
     let requestType = "GET";
     let contentType = "";
     let expires = new Date().getTime() + 60 * 60;
+    const validRequestTypes = ["GET", "PUT", "POST", "DELETE"];
+    const validContentTypes = ["application/json", "application/xml"];
     if ('requestType' in params) {
+        if (validRequestTypes.indexOf(params.requestType) === -1) {
+            response.status(400);
+            response.send({ error: "Invalid request type supplied. Use GET, PUT, POST, or DELETE." });
+            return;
+        }
         requestType = params.requestType;
     }
     if ('contentType' in params) {
+        if (validContentTypes.indexOf(params.contentType) === -1) {
+            response.status(400);
+            response.send({ error: "Invalid request type supplied. Use GET, PUT, POST, or DELETE." });
+            return;
+        }
         contentType = params.contentType;
     }
     if ('expires' in params) {
+        if (isNaN(params.expires)) {
+            response.status(400);
+            response.send({ error: "Invalid expiration timestamp supplied. Provide a proper timestamp in seconds." });
+            return;
+        }
         expires = params.expires;
     }
     const key = 'info.json';
