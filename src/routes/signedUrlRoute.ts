@@ -28,7 +28,7 @@ signedUrlRouter.get('/', function(request, response) {
 	if('contentType' in params) {
         if(validContentTypes.indexOf(params.contentType) === -1) {
             response.status(400)
-            response.send({error: "Invalid request type supplied. Use GET, PUT, POST, or DELETE."})
+            response.send({error: "Invalid content type supplied. Use application/json or application/xml."})
             return
         }
         contentType = params.contentType
